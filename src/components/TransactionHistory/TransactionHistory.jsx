@@ -1,8 +1,9 @@
 import React from 'react';
+import { TransactionHistoryStyled } from './TransactionHistory.styled';
 
 const TransactionHistory = ({ items }) => {
   return (
-    <table class="transaction-history">
+    <TransactionHistoryStyled>
       <thead>
         <tr>
           <th>Type</th>
@@ -14,10 +15,10 @@ const TransactionHistory = ({ items }) => {
       <tbody>
         {items.map(({ id, type, amount, currency }) => {
           return (
-            <tr>
-              <td>Invoice</td>
-              <td>125</td>
-              <td>USD</td>
+            <tr key={id}>
+              <td>{type}</td>
+              <td>{amount}</td>
+              <td>{currency}</td>
             </tr>
           );
         })}
@@ -32,7 +33,7 @@ const TransactionHistory = ({ items }) => {
           <td>USD</td>
         </tr> */}
       </tbody>
-    </table>
+    </TransactionHistoryStyled>
   );
 };
 
