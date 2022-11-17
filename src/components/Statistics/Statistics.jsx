@@ -1,21 +1,30 @@
 import React from 'react';
-import css from './Statistics.module.css';
+import { getRandomHexColor } from 'utils/randomColor';
+import {
+  StatisticStyled,
+  StatisticList,
+  TitleStatistic,
+  TitleData,
+} from './Statistics.styled';
 
 const Statistics = ({ title, stats }) => {
   return (
-    <section className={css.statistics}>
-      {title && <h2 className={css.title}>{title}</h2>}
-      <ul className={css.statList}>
+    <StatisticStyled>
+      {title && <TitleStatistic>{title}</TitleStatistic>}
+      <StatisticList>
         {stats.map(({ id, label, percentage }) => {
           return (
-            <li className={css.item} key={id}>
+            <TitleData
+              key={id}
+              style={{ backgroundColor: getRandomHexColor() }}
+            >
               <span className="label">{label}</span>
               <span className="percentage">{percentage}</span>
-            </li>
+            </TitleData>
           );
         })}
-      </ul>
-    </section>
+      </StatisticList>
+    </StatisticStyled>
   );
 };
 
