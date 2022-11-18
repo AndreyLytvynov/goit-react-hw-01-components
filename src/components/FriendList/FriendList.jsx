@@ -3,7 +3,7 @@ import FriendListItem from './FriendListItem';
 
 const FriendList = ({ friends }) => {
   return (
-    <ul className="friend-list">
+    <ul>
       {friends.map(el => {
         return (
           <FriendListItem

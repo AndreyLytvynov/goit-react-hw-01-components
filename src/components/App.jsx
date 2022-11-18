@@ -7,10 +7,12 @@ import transactions from '../data/transactions.json';
 import Statistics from './Statistics/Statistics';
 import FriendList from './FriendList/FriendList';
 import TransactionHistory from './TransactionHistory/TransactionHistory';
+import { theme } from './Theme';
+import { ThemeProvider } from 'styled-components';
 
 export const App = () => {
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <Profile
         username={user.username}
         tag={user.tag}
@@ -21,6 +23,6 @@ export const App = () => {
       <Statistics title="Upload stats" stats={data} />
       <FriendList friends={friends} />
       <TransactionHistory items={transactions} />
-    </>
+    </ThemeProvider>
   );
 };
