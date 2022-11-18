@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box } from 'components/Box';
 import { TableHeadStyled, TableBodyStyled } from './TransactionHistory.styled';
+import { theme } from 'components/Theme';
 
 const TransactionHistory = ({ items }) => {
   return (
@@ -16,6 +17,7 @@ const TransactionHistory = ({ items }) => {
     >
       <TableHeadStyled>
         <Box
+          backgroundColor={theme.colors.primary}
           as="tr"
           textAlign="center"
           display="flex"

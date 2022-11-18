@@ -18,7 +18,7 @@ export const TableBodyStyled = styled.tbody`
     background-color: #d6f0f5;
   }
   & td {
-    color: #8eb8c0;
+    color: #4699aa;
     width: calc(100% / 3);
   }
 `;
