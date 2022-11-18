@@ -2,6 +2,8 @@ import React from 'react';
 import FriendListItem from './FriendListItem';
 
 const FriendList = ({ friends }) => {
+  const a = 1 + 1;
+  console.log(a);
   return (
     <ul>
       {friends.map(el => {
